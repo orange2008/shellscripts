@@ -12,7 +12,18 @@ echo "Installing NANO for editing.."
 apt install nano -y
 mkdir -p $SHARE
 chmod 777 $SHARE
-echo "[$NAME]\npath = $SHARE\nbrowseable = yes\nwritable = yes\ncomment = samba share\npublic = no" > /etc/samba/smb.conf
+echo "Please copy the following code."
+echo "[$SHARE]"
+echo "    path = $SHARE"
+echo "    browseable = yes"
+echo "    writable = yes"
+echo "    comment = smb share"
+echo "    public = no"
+echo "------------------"
+echo "When you copied, press enter to open the configuration file."
+echo "You'll need to copy these code to the end of the file."
+read OK
+nano /etc/samba/smb.conf
 echo "Creating smb user.."
 smbpasswd -a $USER
 systemctl restart smbd
