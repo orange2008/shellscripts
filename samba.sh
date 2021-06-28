@@ -13,7 +13,7 @@ apt install nano -y
 mkdir -p $SHARE
 chmod 777 $SHARE
 echo "Please copy the following code."
-echo "[$SHARE]"
+echo "[$NAME]"
 echo "    path = $SHARE"
 echo "    browseable = yes"
 echo "    writable = yes"
