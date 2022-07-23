@@ -8,7 +8,7 @@ tar xjvf nasm-2.15.05.tar.bz2
 cd nasm-2.15.05
 ./autogen.sh
 PATH=”$HOME/bin:$PATH” ./configure -prefix=”$HOME/ffmpeg_build” -bindir=”$HOME/bin”
-make -j${nproc}
+make -j$(nproc)
 sudo make install
 
 cd ~/ffmpeg_sources
