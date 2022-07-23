@@ -24,7 +24,7 @@ texinfo \
 wget \
 yasm \
 zlib1g-dev
-sudo apt install libunistring-dev libaom-dev libdav1d-dev
+sudo apt install libunistring-dev libaom-dev
 mkdir -p ~/ffmpeg_sources ~/bin
 cd ~/ffmpeg_sources && \
 wget https://www.nasm.us/pub/nasm/releasebuilds/2.15.05/nasm-2.15.05.tar.bz2 && \
