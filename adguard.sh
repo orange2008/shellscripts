@@ -4,7 +4,7 @@ apt install -y wget curl
 echo "-------"
 echo "You'll need to type in some arguments in order to finish your setup."
 echo "Note that we won't make any changes on your Web UI."
-echo "You need to go to http://$(curl http://icanhazip.com):3000 to finish your AdGuard Setup."
+echo "You need to go to http://$(curl -4 http://icanhazip.com):3000 to finish your AdGuard Setup."
 echo "-- Script written by Frank Ruan. Licensed under MIT."
 # Prompt user to enter their domain
 echo "--------------------------"
@@ -41,7 +41,7 @@ echo "Outputting the current port 53 usage, nothing should be outputted."
 netstat -nlp | grep 53
 echo "--------------------------------------------"
 echo "Everything should be done."
-CURRENT_IP = $(curl http://icanhazip.com)
+CURRENT_IP = $(curl -4 http://icanhazip.com)
 echo "Open http://$CURRENT_IP:3000 to do further configuration."
 echo "Here's your certificate path (hopefully)."
 echo "Certificate Path: /root/.acme.sh/$DOMAIN_NAME/fullchain.cer"
