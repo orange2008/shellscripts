@@ -1,7 +1,10 @@
 #!/bin/sh
+apt update
+apt install -y wget curl 
+echo "-------"
 echo "You'll need to type in some arguments in order to finish your setup."
 echo "Note that we won't make any changes on your Web UI."
-echo "You need to go to http://[WEB_UI]:3000 to finish your AdGuard Setup."
+echo "You need to go to http://$(curl http://icanhazip.com):3000 to finish your AdGuard Setup."
 echo "-- Script written by Frank Ruan. Licensed under MIT."
 # Prompt user to enter their domain
 echo "--------------------------"
@@ -17,9 +20,6 @@ read CF_Email
 echo "Okay, we are doing our job."
 echo "Enabled Verbose logging..."
 echo "Shutting down firewall..."
-echo "Installing dependencies..."
-apt update
-apt install -y wget curl 
 systemctl stop ufw
 systemctl disable ufw
 iptables -F
