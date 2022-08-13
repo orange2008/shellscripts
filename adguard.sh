@@ -28,6 +28,8 @@ curl -s -S -L https://raw.githubusercontent.com/AdguardTeam/AdGuardHome/master/s
 echo "Installing acme.sh..."
 curl https://get.acme.sh | sh -s email=$CF_Email
 echo "Getting a TLS certificate for you..."
+export CF_Key=$CF_Key
+export CF_Email=$CF_Email
 /root/.acme.sh/acme.sh --issue -d $DOMAIN_NAME --dns dns_cf
 echo "The TLS certificate should be applied already."
 echo "Freeing up your :53 port..."
