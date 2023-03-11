@@ -6,5 +6,5 @@ wget http://archive.ubuntu.com/ubuntu/pool/main/o/openssl/libssl1.1_1.1.0g-2ubun
 apt install -y ./libssl1.deb
 wget http://enterprise.proxmox.com/debian/proxmox-release-bullseye.gpg -O /etc/apt/trusted.gpg.d/proxmox-release-bullseye.gpg
 apt update
-apt install proxmox-backup-client
+apt install -y proxmox-backup-client
 echo "\nDone."
