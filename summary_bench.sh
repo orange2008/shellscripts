@@ -87,7 +87,7 @@ mkdir -p $HOME/.abench
 ##############################################################################################################################
 [[ $debug != 1 ]] && clear
 ##############################################################################################################################
-echo -e "${bold}Obtaining check-sys 与 abench ...${normal}"
+echo -e "${bold}Obtaining check-sys and abench ...${normal}"
 [[ $EUID = 0 ]] && wget -qO /usr/local/bin/abench https://shell.frank-ruan.com/summary_bench.sh && chmod 755 /usr/local/bin/abench
 source <(wget -qO- https://shell.frank-ruan.com/summary_bench/check-sys)
 ##############################################################################################################################
